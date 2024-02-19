@@ -79,6 +79,9 @@ public class LoginActivity extends AppCompatActivity {
                                 loginEmail.setText(authh.getCurrentUser().getEmail());
                                 loginPassword.setText(authh.getCurrentUser().getDisplayName());
                                 Toast.makeText(LoginActivity.this, "successfully", Toast.LENGTH_SHORT).show();
+                                Intent intent2 = new Intent(LoginActivity.this, BottomNavigationActivity.class);
+                                startActivity(intent2);
+
 
                             }
                             else{
@@ -100,6 +103,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        authh = FirebaseAuth.getInstance();  // Initialize authh here
+
         FirebaseApp.initializeApp(this);
 
         auth = FirebaseAuth.getInstance();
@@ -113,16 +118,17 @@ public class LoginActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
 
 
-       /* GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
-        googleSignInClient = GoogleSignIn.getClient(this, gso);*/
+        googleSignInClient = GoogleSignIn.getClient(this, gso);
 
         btn_google.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                googleLogin();
+                Intent intent = googleSignInClient.getSignInIntent();
+                activityResultLauncher.launch(intent);
             }
         });
 
@@ -176,53 +182,9 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void googleLogin() {
-        Intent intent = googleSignInClient.getSignInIntent();
-        startActivityForResult(intent , RC_SIGN_IN);
-    }
 
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if(requestCode == RC_SIGN_IN){
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
 
 
-            try {
-                GoogleSignInAccount account = task.getResult(ApiException.class);
-                firebaseAuth(account.getIdToken());
-            }catch (Exception e){
-                Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
 
-    private void firebaseAuth(String idToken) {
-        AuthCredential credential = GoogleAuthProvider.getCredential(idToken,null);
-        auth.signInWithCredential(credential)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            FirebaseUser user = auth.getCurrentUser();
-
-                            HashMap<String, Object> map = new HashMap<>();
-                            map.put("id" , user.getUid());
-                            map.put("name" , user.getDisplayName());
-                            map.put("profile" , user.getPhotoUrl());
-
-                            database.getReference().child("users").child(user.getUid()).setValue(map);
-
-                            Intent intent = new Intent(LoginActivity.this , HomeFragment.class);
-                            startActivity(intent);
-
-                        }else{
-                            Toast.makeText(LoginActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
-
-                        }
-                    }
-                });
-    }
 }

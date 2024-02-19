@@ -41,7 +41,7 @@ import io.reactivex.rxjava3.core.Observer;
 import io.reactivex.rxjava3.disposables.Disposable;
 import io.reactivex.rxjava3.functions.Predicate;
 
-public class SearchFragment extends Fragment implements SearchView , OnClickListener {
+public class SearchFragment extends Fragment implements SearchView{
     List<String> categoriesName = new ArrayList<>();
     List<String> countriesName =  new ArrayList<>();
 
@@ -49,7 +49,7 @@ public class SearchFragment extends Fragment implements SearchView , OnClickList
     CountryAdapter countryAdapter;
 
     EditText etSearch;
-    Button btnCategory, btnCountry, btnIngredient;
+    Button btnCategory, btnCountry;
     RecyclerView recyclerView_res;
     LinearLayoutManager linearLayoutManager;
 
@@ -81,12 +81,11 @@ public class SearchFragment extends Fragment implements SearchView , OnClickList
         etSearch = view.findViewById(R.id.et_search);
         btnCategory = view.findViewById(R.id.btn_categories_list_search);
         btnCountry = view.findViewById(R.id.btn_countries_list_search);
-        btnIngredient = view.findViewById(R.id.btn_ingredients_list_search);
 
 
         // Adapters
-        countryAdapter = new CountryAdapter(new ArrayList<>(), getContext(), this);
-        categoryAdapter = new CategoryAdapter(new ArrayList<>(), getContext(), this);
+        countryAdapter = new CountryAdapter(new ArrayList<>(), getContext());
+        categoryAdapter = new CategoryAdapter(new ArrayList<>(), getContext());
 
 
         // recyclerView_res.setAdapter(categoryAdapter);
@@ -131,14 +130,7 @@ public class SearchFragment extends Fragment implements SearchView , OnClickList
             }
         });
 
-        btnIngredient.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //    recyclerView_res.setAdapter(ingredientAdapter);
-                //  searchPresenterImp.getIngrediants();
 
-            }
-        });
 
 
         Observable<String> observable = Observable.create(new ObservableOnSubscribe<String>() {

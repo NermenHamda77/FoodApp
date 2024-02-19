@@ -24,15 +24,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     private static final String TAG = "RecyclerviewAdapter";
     List<Category> categories;
     Context context;
-    OnClickListener listener;
 
 
     private List<Category> filteredCategories;
 
-    public CategoryAdapter(List<Category> category, Context context, OnClickListener listener) {
+    public CategoryAdapter(List<Category> category, Context context) {
         this.categories = category;
         this.context = context;
-        this.listener = listener;
         this.filteredCategories = new ArrayList<>(category); // Initialize with the full list
     }
 

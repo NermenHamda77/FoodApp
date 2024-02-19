@@ -6,6 +6,8 @@ public interface SearchPresenter {
     public void getCategories();
     public void getCountries();
 
-    public void getIngrediants(String categoryName);
+    public void getCountries(String categoryName);
+    public void getCategories(String countryName);
+
 
 }

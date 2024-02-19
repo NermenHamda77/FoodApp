@@ -86,7 +86,23 @@ public class SearchPresenterImp implements SearchPresenter {
                 });
     }
 
+    /**
+     * @param categoryName
+     */
+    @Override
+    public void getCountries(String categoryName) {
 
+    }
+
+    /**
+     * @param countryName
+     */
+    @Override
+    public void getCategories(String countryName) {
+
+    }
+
+/*
     @Override
     public void getIngrediants(String categoryName) {
         Observable<IngredientResponse> observable = repo.getAllIngredients(categoryName);
@@ -112,7 +128,6 @@ public class SearchPresenterImp implements SearchPresenter {
 
                     }
                 });
-
-    }
+    }*/
 }
 

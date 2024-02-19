@@ -24,15 +24,13 @@ import java.util.List;
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHolder> {
     private List<Country> meals;
     private Context context;
-    OnClickListener listener;
     private List<Country> filteredCountries;
 
     private static final String TAG = "CountryAdapter";
 
-    public CountryAdapter(List<Country> meals, Context context, OnClickListener listener) {
+    public CountryAdapter(List<Country> meals, Context context) {
         this.meals = meals;
         this.context = context;
-        this.listener = listener;
         this.filteredCountries = new ArrayList<>(meals); //put all elements of the list inside it
     }
 

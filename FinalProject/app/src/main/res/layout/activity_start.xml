@@ -55,6 +55,8 @@
         android:textSize="17sp"
         android:text="@string/btn_sign_up_start"
         android:textAllCaps="false"
+        android:textColor="@color/black"
+
         android:fontFamily="@font/lobster"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,6 +73,7 @@
         android:padding="14dp"
         android:textAllCaps="false"
         android:fontFamily="@font/lobster"
+        android:textColor="@color/black"
 
         android:id="@+id/btn_login_start"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -89,6 +92,7 @@
         android:textSize="17sp"
         android:fontFamily="@font/lobster"
         android:textAllCaps="false"
+        android:textColor="@color/black"
         android:id="@+id/btn_guest_start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
