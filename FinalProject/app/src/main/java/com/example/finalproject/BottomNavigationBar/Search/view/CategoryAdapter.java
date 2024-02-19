@@ -31,13 +31,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     public CategoryAdapter(List<Category> category, Context context) {
         this.categories = category;
         this.context = context;
-        this.filteredCategories = new ArrayList<>(category); // Initialize with the full list
+        this.filteredCategories = new ArrayList<>(category);
     }
 
     public void filter(String query) {
         filteredCategories.clear();
         if (query.isEmpty()) {
-            filteredCategories.addAll(categories); // If the query is empty, show the full list
+            filteredCategories.addAll(categories);
         } else {
             String lowerCaseQuery = query.toLowerCase();
             for (Category category : categories) {
