@@ -9,7 +9,5 @@ import java.util.List;
 public interface AllCountryView {
     public void showCountryData(List<Country> meals);
     public void showCountryErrMsg(String error);
-/*
-    public void getCountryName(List<Meal> meals);
-*/
+
 }

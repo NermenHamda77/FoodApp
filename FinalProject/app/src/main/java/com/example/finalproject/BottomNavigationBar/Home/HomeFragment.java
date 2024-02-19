@@ -151,7 +151,6 @@ public class HomeFragment extends Fragment implements OnMealClickListener, Rando
         randomMealsPreseneterImp.addToFav(meals);
 
     }
-     // take list of meals of country name
 
 }
 

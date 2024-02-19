@@ -61,32 +61,3 @@ public class AllMealsOfCategoryPresenterImp implements AllMealsOfCategoryPresent
                 );
     }
 }
-/*
- public void getMealsByCountryName(String countryName) {
-        Observable<MealResponse> observable = mealsRepository.getByCountryName(countryName);
-        observable.observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<MealResponse>() {
-                    @Override
-                    public void onSubscribe(@NonNull Disposable d) {
-
-                    }
-
-                    @Override
-                    public void onNext(@NonNull MealResponse mealResponse) {
-                         view.getMealsByCountryName(mealResponse.getMeals());
-                    }
-
-                    @Override
-                    public void onError(@NonNull Throwable e) {
-                        view.CountryMealsMsg("Error" + e);
-
-                    }
-
-                    @Override
-                    public void onComplete() {
-
-                    }
-                });
-
-    }
- */

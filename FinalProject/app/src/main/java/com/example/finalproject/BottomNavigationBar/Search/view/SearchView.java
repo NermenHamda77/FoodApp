@@ -8,9 +8,8 @@ import com.example.finalproject.model.Meal;
 import java.util.List;
 
 public interface SearchView {
-    public void showCategories(List<Category> categories) ;
-    public void showCountries(List<Country> meals);
-    public void showIngredients(List<Ingredient> ingredients);
+     void showCategories(List<Category> categories) ;
+     void showCountries(List<Country> meals);
 
-    public void showMsg(String error);
+     void showMsg(String error);
     }

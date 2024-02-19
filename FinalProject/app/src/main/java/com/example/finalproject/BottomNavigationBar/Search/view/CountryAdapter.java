@@ -31,13 +31,13 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
     public CountryAdapter(List<Country> meals, Context context) {
         this.meals = meals;
         this.context = context;
-        this.filteredCountries = new ArrayList<>(meals); //put all elements of the list inside it
+        this.filteredCountries = new ArrayList<>(meals);
     }
 
     public void filter(String query) {
         filteredCountries.clear();
         if (query.isEmpty()) {
-            filteredCountries.addAll(meals); // If the query is empty, show the full list
+            filteredCountries.addAll(meals);
         } else {
             String lowerCaseQuery = query.toLowerCase();
             for (Country country : meals) {

@@ -22,7 +22,7 @@ import com.example.finalproject.model.MealsRepositoryImp;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CategoryFragment1 extends Fragment implements AllCategoryView,OnCategoryClickListener {
+public class CategoryFragment1 extends Fragment implements AllCategoryView {
     private static final String TAG = "CategoryFragment1";
     RecyclerView recyclerView;
     CategoryAdapter categoryAdapter;
@@ -39,7 +39,7 @@ public class CategoryFragment1 extends Fragment implements AllCategoryView,OnCat
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_category1, container, false);
         recyclerView = view.findViewById(R.id.recyclerViewFrag);
-        categoryAdapter = new CategoryAdapter(new ArrayList<>(), getActivity() , CategoryFragment1.this );
+        categoryAdapter = new CategoryAdapter(new ArrayList<>(), getActivity()   );
         recyclerView.setAdapter(categoryAdapter);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity() , 2));
         presenterImp = new AllCategoryPresenterImp(this, MealsRepositoryImp.getInstance(RemoteDataSourceAPI.getInstance(), MealLocalDataSourceImp.getInstance(getActivity())));
@@ -49,7 +49,6 @@ public class CategoryFragment1 extends Fragment implements AllCategoryView,OnCat
 
     }
 
-//////////////////////////////////////////////////////////////////////////
     @Override
     public void showData(List<Category> categories) {
         categoryAdapter.setCategory(categories);
@@ -62,9 +61,5 @@ public class CategoryFragment1 extends Fragment implements AllCategoryView,OnCat
 
     }
 
-    @Override
-    public void onCategoryClick(Category categories) {
-        Toast.makeText(getActivity(), "Successfully", Toast.LENGTH_SHORT).show();
-        ////////
-    }
+
 }

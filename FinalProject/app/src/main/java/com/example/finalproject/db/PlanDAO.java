@@ -25,16 +25,3 @@ public interface PlanDAO {
     Completable deletePlan(MealPlan plan);
 
 }
-/*
-@Dao
-public interface MyPlanDAO {
-    @Query("SELECT * From plans_table")
-    Flowable<List<MealPlan>> getAllPlans();
-
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    Completable insertPlan(MealPlan plan);
-
-    @Delete
-    Completable deletePlan(MealPlan plan);
-}
- */

@@ -15,13 +15,7 @@ public class AllCategoryPresenterImp implements AllCategoryPreseneter {
     private AllCategoryView view;
     private MealsRepository mealsRepository;
     private static final String TAG = "AllCategoryPresenterImp";
-/*
 
-   private AllProductsView view;
-
-    private ProductRepository productRepository;
-    private static final String TAG = "AllProductsPresenterImp";
- */
     public AllCategoryPresenterImp(AllCategoryView view, MealsRepository mealsRepository) {
         this.view = view;
         this.mealsRepository = mealsRepository;

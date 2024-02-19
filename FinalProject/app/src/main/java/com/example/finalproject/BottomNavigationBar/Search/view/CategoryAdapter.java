@@ -46,6 +46,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
                 }
             }
         }
+
+
         notifyDataSetChanged();
     }
 
@@ -81,9 +83,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             @Override
             public void onClick(View v) {
 
-               /* Intent intent = new Intent(context , MealsOfCategoryActivity.class);
-                intent.putExtra("CountryName" , current.getStrCategory());
-                context.startActivity(intent);*/
             }
         });
 

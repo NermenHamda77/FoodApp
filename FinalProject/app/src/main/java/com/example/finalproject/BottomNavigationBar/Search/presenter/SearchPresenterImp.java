@@ -86,48 +86,7 @@ public class SearchPresenterImp implements SearchPresenter {
                 });
     }
 
-    /**
-     * @param categoryName
-     */
-    @Override
-    public void getCountries(String categoryName) {
 
-    }
 
-    /**
-     * @param countryName
-     */
-    @Override
-    public void getCategories(String countryName) {
-
-    }
-
-/*
-    @Override
-    public void getIngrediants(String categoryName) {
-        Observable<IngredientResponse> observable = repo.getAllIngredients(categoryName);
-        observable.observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<IngredientResponse>() {
-                    @Override
-                    public void onSubscribe(@NonNull Disposable d) {
-
-                    }
-
-                    @Override
-                    public void onNext(@NonNull IngredientResponse ingredientResponse) {
-                          view.showIngredients(ingredientResponse.getIngredients());
-                    }
-
-                    @Override
-                    public void onError(@NonNull Throwable e) {
-                         view.showMsg("Error" + e.getMessage());
-                    }
-
-                    @Override
-                    public void onComplete() {
-
-                    }
-                });
-    }*/
 }
 

@@ -61,7 +61,6 @@ public class LoginActivity extends AppCompatActivity {
     ImageView btn_google;
     FirebaseDatabase database;
     GoogleSignInClient googleSignInClient;
-    int RC_SIGN_IN = 20;
     FirebaseAuth authh;
     private final ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override

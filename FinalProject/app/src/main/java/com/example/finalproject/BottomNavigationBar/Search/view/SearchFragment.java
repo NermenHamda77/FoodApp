@@ -104,8 +104,6 @@ public class SearchFragment extends Fragment implements SearchView{
                 recyclerView_res.setAdapter(categoryAdapter);
                 searchPresenterImp.getCategories();
 
-                recyclerView_res.setAdapter(categoryAdapter);
-                searchPresenterImp.getCategories();
 
                 List<Category> categories = categoryAdapter.getCategories();
                 categoriesName.clear();
@@ -172,9 +170,11 @@ public class SearchFragment extends Fragment implements SearchView{
 
                     @Override
                     public void onNext(@NonNull String s) {
+                        countriesName.clear();
                         for (String name : countriesName) {
                             if (name.toLowerCase().contains(s.toLowerCase())) {
-                                performSearch(name);
+                                countriesName.add(name + "\n");
+                               // performSearch(name);
                             }
                         }
                     }
@@ -211,15 +211,6 @@ public class SearchFragment extends Fragment implements SearchView{
 
     }
 
-
-    @Override
-    public void showIngredients(List<Ingredient> ingredients) {
-            /*
-            ingredientAdapter.setIngredient(ingredients);
-            ingredientAdapter.notifyDataSetChanged();
-
-             */
-    }
 
 
 

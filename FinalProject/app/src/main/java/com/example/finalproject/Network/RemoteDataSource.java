@@ -7,14 +7,14 @@ import com.example.finalproject.model.MealResponse;
 import io.reactivex.rxjava3.core.Observable;
 
 public interface RemoteDataSource {
-    public Observable networkRandomMeals();
-    public Observable<CategoryResponse> networkCategories();
-    public Observable<CountryResponse> networkCountries();
-    public Observable networkIngredients(String ingredients);
+     Observable networkRandomMeals();
+     Observable<CategoryResponse> networkCategories();
+     Observable<CountryResponse> networkCountries();
+     Observable networkIngredients(String ingredients);
 
-    public Observable<MealResponse> networkMealsOfCountry(String countryName);
-    public Observable<MealResponse> networkMealsOfCategory(String categoryName);
-    public Observable<MealResponse> networkGetSearchMeals();
-    public Observable<MealResponse> networkGetMealDetails();
+     Observable<MealResponse> networkMealsOfCountry(String countryName);
+     Observable<MealResponse> networkMealsOfCategory(String categoryName);
+     Observable<MealResponse> networkGetSearchMeals();
+     Observable<MealResponse> networkGetMealDetails();
 
 }

@@ -95,14 +95,6 @@ public class MealScreenActivity extends AppCompatActivity{
             Log.i(TAG, "onCreate: thhhhhhhhhhhhhhhhhhh");
         }
 
-
-
-
-
-
-
-
-
     }
 
     public void mealDetails(Meal meal) {

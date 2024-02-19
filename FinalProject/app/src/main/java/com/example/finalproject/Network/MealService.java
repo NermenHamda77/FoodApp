@@ -34,10 +34,6 @@ public interface MealService {
     Observable<MealResponse> getCategoryMeals(@Query("c") String categoryName);
 
 
-    // get list of meals of specific Country
-   /* @GET("filter.php?a=Canadian")
-    Observable<MealResponse> getCountryMeals(@Query("a") String areaName);
-*/
     // meals of country
     @GET("filter.php?")
     Observable<MealResponse> getMealsByCountryName(@Query("a") String mealsCountry);
@@ -51,34 +47,7 @@ public interface MealService {
     Observable<MealResponse>  getSearchMeals();
 
 }
-/*
-@GET("search.php?")
-    fun getMealByName(@Query("s") s:String):Call<RandomMealResponse>
- */
 
 
 
 
-
-
-/*
- @GET("categories.php")
-    fun getCategories(): Call<CategoryResponse>
-
-    @GET("filter.php?")
-    fun getMealsByCategory(@Query("i") category:String):Call<MealsResponse>
-
-    @GET ("random.php")
-    fun getRandomMeal():Call<RandomMealResponse>
-
-    @GET("lookup.php?")
-    fun getMealById(@Query("i") id:String):Call<RandomMealResponse>
-
-    @GET("search.php?")
-    fun getMealByName(@Query("s") s:String):Call<RandomMealResponse>
- */
- /*
-    @GET("meals")
-    Call<MealResponse> getAllMeals();
-   @GET("search.php?s")
-    */

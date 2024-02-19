@@ -102,34 +102,4 @@ public class MealsRepositoryImp implements MealsRepository {
         return localDataSource.deletePlan(plan);
     }
 
-    /**
-     * @return
-     */
-    @Override
-    public Completable deleteMealsPlans() {
-        return null;
-    }
-
-    /**
-     * @return
-     */
-    @Override
-    public Flowable<List<MealPlan>> receivedStoredPlans() {
-        return null;
-    }
-
-    /**
-     * @return
-     */
-    @Override
-    public Completable deleteAllFavMeals() {
-        return null;
-    }
-
-
-     /*   @Override
-    public Observable<MealResponse> getAllMeals() {
-       return remoteSource.;
-
-    }*/
 }
