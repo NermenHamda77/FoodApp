@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -20,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.finalproject.BottomNavigationBar.MealScreen.view.MealScreenActivity;
 import com.example.finalproject.R;
+import com.example.finalproject.StartActivity;
 import com.example.finalproject.model.Meal;
 import com.example.finalproject.model.MealPlan;
 
@@ -74,176 +76,179 @@ public class MealsOfCountryAdapter extends RecyclerView.Adapter<MealsOfCountryAd
         holder.addPlan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("Select Day of the Week");
+                if(StartActivity.iisGuest == true){
+                    Toast.makeText(context, "You Cant Add To Plan", Toast.LENGTH_SHORT).show();
+                }else {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                    builder.setTitle("Select Day of the Week");
 
-                final String[] daysOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-                builder.setItems(daysOfWeek, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        int selectedDay = which + 1; // Days in SQLite are typically 1-based
-                       if(selectedDay == 1){
-                           plan.setIdMeal(current.getIdMeal());
-                           plan.setStrMeal(current.getStrMeal());
-                           plan.setStrArea(current.getStrArea());
-                           plan.setStrCategory(current.getStrCategory());
-                           plan.setStrIngredient1(current.getStrIngredient1());
-                           plan.setStrIngredient2(current.getStrIngredient2());
-                           plan.setStrIngredient3(current.getStrIngredient3());
-                           plan.setStrIngredient4(current.getStrIngredient4());
-                           plan.setStrIngredient5(current.getStrIngredient5());
-                           plan.setStrIngredient6(current.getStrIngredient6());
-                           plan.setStrIngredient7(current.getStrIngredient7());
-                           plan.setStrIngredient8(current.getStrIngredient8());
-                           plan.setStrIngredient9(current.getStrIngredient9());
-                           plan.setStrIngredient10(current.getStrIngredient10());
-                           plan.setStrIngredient11(current.getStrIngredient11());
-                           plan.setStrIngredient12(current.getStrIngredient12());
-                           plan.setStrIngredient13(current.getStrIngredient13());
-                           plan.setStrIngredient14(current.getStrIngredient14());
-                           plan.setStrYoutube(current.getStrYoutube());
-                           plan.setDayMeal("Sunday");
-                           listener.addMealToPlan(plan);
+                    final String[] daysOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+                    builder.setItems(daysOfWeek, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            int selectedDay = which + 1; // Days in SQLite are typically 1-based
+                            if (selectedDay == 1) {
+                                plan.setIdMeal(current.getIdMeal());
+                                plan.setStrMeal(current.getStrMeal());
+                                plan.setStrArea(current.getStrArea());
+                                plan.setStrCategory(current.getStrCategory());
+                                plan.setStrIngredient1(current.getStrIngredient1());
+                                plan.setStrIngredient2(current.getStrIngredient2());
+                                plan.setStrIngredient3(current.getStrIngredient3());
+                                plan.setStrIngredient4(current.getStrIngredient4());
+                                plan.setStrIngredient5(current.getStrIngredient5());
+                                plan.setStrIngredient6(current.getStrIngredient6());
+                                plan.setStrIngredient7(current.getStrIngredient7());
+                                plan.setStrIngredient8(current.getStrIngredient8());
+                                plan.setStrIngredient9(current.getStrIngredient9());
+                                plan.setStrIngredient10(current.getStrIngredient10());
+                                plan.setStrIngredient11(current.getStrIngredient11());
+                                plan.setStrIngredient12(current.getStrIngredient12());
+                                plan.setStrIngredient13(current.getStrIngredient13());
+                                plan.setStrIngredient14(current.getStrIngredient14());
+                                plan.setStrYoutube(current.getStrYoutube());
+                                plan.setDayMeal("Sunday");
+                                listener.addMealToPlan(plan);
 
-                       }else if(selectedDay ==2){
-                           plan.setIdMeal(current.getIdMeal());
-                           plan.setStrMeal(current.getStrMeal());
-                           plan.setStrArea(current.getStrArea());
-                           plan.setStrCategory(current.getStrCategory());
-                           plan.setStrIngredient1(current.getStrIngredient1());
-                           plan.setStrIngredient2(current.getStrIngredient2());
-                           plan.setStrIngredient3(current.getStrIngredient3());
-                           plan.setStrIngredient4(current.getStrIngredient4());
-                           plan.setStrIngredient5(current.getStrIngredient5());
-                           plan.setStrIngredient6(current.getStrIngredient6());
-                           plan.setStrIngredient7(current.getStrIngredient7());
-                           plan.setStrIngredient8(current.getStrIngredient8());
-                           plan.setStrIngredient9(current.getStrIngredient9());
-                           plan.setStrIngredient10(current.getStrIngredient10());
-                           plan.setStrIngredient11(current.getStrIngredient11());
-                           plan.setStrIngredient12(current.getStrIngredient12());
-                           plan.setStrIngredient13(current.getStrIngredient13());
-                           plan.setStrIngredient14(current.getStrIngredient14());
-                           plan.setStrYoutube(current.getStrYoutube());
-                           plan.setDayMeal("Monday");
-                           listener.addMealToPlan(plan);
+                            } else if (selectedDay == 2) {
+                                plan.setIdMeal(current.getIdMeal());
+                                plan.setStrMeal(current.getStrMeal());
+                                plan.setStrArea(current.getStrArea());
+                                plan.setStrCategory(current.getStrCategory());
+                                plan.setStrIngredient1(current.getStrIngredient1());
+                                plan.setStrIngredient2(current.getStrIngredient2());
+                                plan.setStrIngredient3(current.getStrIngredient3());
+                                plan.setStrIngredient4(current.getStrIngredient4());
+                                plan.setStrIngredient5(current.getStrIngredient5());
+                                plan.setStrIngredient6(current.getStrIngredient6());
+                                plan.setStrIngredient7(current.getStrIngredient7());
+                                plan.setStrIngredient8(current.getStrIngredient8());
+                                plan.setStrIngredient9(current.getStrIngredient9());
+                                plan.setStrIngredient10(current.getStrIngredient10());
+                                plan.setStrIngredient11(current.getStrIngredient11());
+                                plan.setStrIngredient12(current.getStrIngredient12());
+                                plan.setStrIngredient13(current.getStrIngredient13());
+                                plan.setStrIngredient14(current.getStrIngredient14());
+                                plan.setStrYoutube(current.getStrYoutube());
+                                plan.setDayMeal("Monday");
+                                listener.addMealToPlan(plan);
 
-                       }else if(selectedDay == 3){
-                           plan.setIdMeal(current.getIdMeal());
-                           plan.setStrMeal(current.getStrMeal());
-                           plan.setStrArea(current.getStrArea());
-                           plan.setStrCategory(current.getStrCategory());
-                           plan.setStrIngredient1(current.getStrIngredient1());
-                           plan.setStrIngredient2(current.getStrIngredient2());
-                           plan.setStrIngredient3(current.getStrIngredient3());
-                           plan.setStrIngredient4(current.getStrIngredient4());
-                           plan.setStrIngredient5(current.getStrIngredient5());
-                           plan.setStrIngredient6(current.getStrIngredient6());
-                           plan.setStrIngredient7(current.getStrIngredient7());
-                           plan.setStrIngredient8(current.getStrIngredient8());
-                           plan.setStrIngredient9(current.getStrIngredient9());
-                           plan.setStrIngredient10(current.getStrIngredient10());
-                           plan.setStrIngredient11(current.getStrIngredient11());
-                           plan.setStrIngredient12(current.getStrIngredient12());
-                           plan.setStrIngredient13(current.getStrIngredient13());
-                           plan.setStrIngredient14(current.getStrIngredient14());
-                           plan.setStrYoutube(current.getStrYoutube());
-                           plan.setDayMeal("Tuesday");
-                           listener.addMealToPlan(plan);
-                       }else if(selectedDay == 4){
-                           plan.setIdMeal(current.getIdMeal());
-                           plan.setStrMeal(current.getStrMeal());
-                           plan.setStrArea(current.getStrArea());
-                           plan.setStrCategory(current.getStrCategory());
-                           plan.setStrIngredient1(current.getStrIngredient1());
-                           plan.setStrIngredient2(current.getStrIngredient2());
-                           plan.setStrIngredient3(current.getStrIngredient3());
-                           plan.setStrIngredient4(current.getStrIngredient4());
-                           plan.setStrIngredient5(current.getStrIngredient5());
-                           plan.setStrIngredient6(current.getStrIngredient6());
-                           plan.setStrIngredient7(current.getStrIngredient7());
-                           plan.setStrIngredient8(current.getStrIngredient8());
-                           plan.setStrIngredient9(current.getStrIngredient9());
-                           plan.setStrIngredient10(current.getStrIngredient10());
-                           plan.setStrIngredient11(current.getStrIngredient11());
-                           plan.setStrIngredient12(current.getStrIngredient12());
-                           plan.setStrIngredient13(current.getStrIngredient13());
-                           plan.setStrIngredient14(current.getStrIngredient14());
-                           plan.setStrYoutube(current.getStrYoutube());
-                           plan.setDayMeal("Wednesday");
-                           listener.addMealToPlan(plan);
-                       }else if(selectedDay == 5){
-                           plan.setIdMeal(current.getIdMeal());
-                           plan.setStrMeal(current.getStrMeal());
-                           plan.setStrArea(current.getStrArea());
-                           plan.setStrCategory(current.getStrCategory());
-                           plan.setStrIngredient1(current.getStrIngredient1());
-                           plan.setStrIngredient2(current.getStrIngredient2());
-                           plan.setStrIngredient3(current.getStrIngredient3());
-                           plan.setStrIngredient4(current.getStrIngredient4());
-                           plan.setStrIngredient5(current.getStrIngredient5());
-                           plan.setStrIngredient6(current.getStrIngredient6());
-                           plan.setStrIngredient7(current.getStrIngredient7());
-                           plan.setStrIngredient8(current.getStrIngredient8());
-                           plan.setStrIngredient9(current.getStrIngredient9());
-                           plan.setStrIngredient10(current.getStrIngredient10());
-                           plan.setStrIngredient11(current.getStrIngredient11());
-                           plan.setStrIngredient12(current.getStrIngredient12());
-                           plan.setStrIngredient13(current.getStrIngredient13());
-                           plan.setStrIngredient14(current.getStrIngredient14());
-                           plan.setStrYoutube(current.getStrYoutube());
-                           plan.setDayMeal("Thursday");
-                           listener.addMealToPlan(plan);
-                       }else if(selectedDay == 6){
-                           plan.setIdMeal(current.getIdMeal());
-                           plan.setStrMeal(current.getStrMeal());
-                           plan.setStrArea(current.getStrArea());
-                           plan.setStrCategory(current.getStrCategory());
-                           plan.setStrIngredient1(current.getStrIngredient1());
-                           plan.setStrIngredient2(current.getStrIngredient2());
-                           plan.setStrIngredient3(current.getStrIngredient3());
-                           plan.setStrIngredient4(current.getStrIngredient4());
-                           plan.setStrIngredient5(current.getStrIngredient5());
-                           plan.setStrIngredient6(current.getStrIngredient6());
-                           plan.setStrIngredient7(current.getStrIngredient7());
-                           plan.setStrIngredient8(current.getStrIngredient8());
-                           plan.setStrIngredient9(current.getStrIngredient9());
-                           plan.setStrIngredient10(current.getStrIngredient10());
-                           plan.setStrIngredient11(current.getStrIngredient11());
-                           plan.setStrIngredient12(current.getStrIngredient12());
-                           plan.setStrIngredient13(current.getStrIngredient13());
-                           plan.setStrIngredient14(current.getStrIngredient14());
-                           plan.setStrYoutube(current.getStrYoutube());
-                           plan.setDayMeal("Friday");
-                           listener.addMealToPlan(plan);
-                       }else if(selectedDay == 7){
-                           plan.setIdMeal(current.getIdMeal());
-                           plan.setStrMeal(current.getStrMeal());
-                           plan.setStrArea(current.getStrArea());
-                           plan.setStrCategory(current.getStrCategory());
-                           plan.setStrIngredient1(current.getStrIngredient1());
-                           plan.setStrIngredient2(current.getStrIngredient2());
-                           plan.setStrIngredient3(current.getStrIngredient3());
-                           plan.setStrIngredient4(current.getStrIngredient4());
-                           plan.setStrIngredient5(current.getStrIngredient5());
-                           plan.setStrIngredient6(current.getStrIngredient6());
-                           plan.setStrIngredient7(current.getStrIngredient7());
-                           plan.setStrIngredient8(current.getStrIngredient8());
-                           plan.setStrIngredient9(current.getStrIngredient9());
-                           plan.setStrIngredient10(current.getStrIngredient10());
-                           plan.setStrIngredient11(current.getStrIngredient11());
-                           plan.setStrIngredient12(current.getStrIngredient12());
-                           plan.setStrIngredient13(current.getStrIngredient13());
-                           plan.setStrIngredient14(current.getStrIngredient14());
-                           plan.setStrYoutube(current.getStrYoutube());
-                           plan.setDayMeal("Saturday");
-                           listener.addMealToPlan(plan);
-                       }
-                    }
-                });
+                            } else if (selectedDay == 3) {
+                                plan.setIdMeal(current.getIdMeal());
+                                plan.setStrMeal(current.getStrMeal());
+                                plan.setStrArea(current.getStrArea());
+                                plan.setStrCategory(current.getStrCategory());
+                                plan.setStrIngredient1(current.getStrIngredient1());
+                                plan.setStrIngredient2(current.getStrIngredient2());
+                                plan.setStrIngredient3(current.getStrIngredient3());
+                                plan.setStrIngredient4(current.getStrIngredient4());
+                                plan.setStrIngredient5(current.getStrIngredient5());
+                                plan.setStrIngredient6(current.getStrIngredient6());
+                                plan.setStrIngredient7(current.getStrIngredient7());
+                                plan.setStrIngredient8(current.getStrIngredient8());
+                                plan.setStrIngredient9(current.getStrIngredient9());
+                                plan.setStrIngredient10(current.getStrIngredient10());
+                                plan.setStrIngredient11(current.getStrIngredient11());
+                                plan.setStrIngredient12(current.getStrIngredient12());
+                                plan.setStrIngredient13(current.getStrIngredient13());
+                                plan.setStrIngredient14(current.getStrIngredient14());
+                                plan.setStrYoutube(current.getStrYoutube());
+                                plan.setDayMeal("Tuesday");
+                                listener.addMealToPlan(plan);
+                            } else if (selectedDay == 4) {
+                                plan.setIdMeal(current.getIdMeal());
+                                plan.setStrMeal(current.getStrMeal());
+                                plan.setStrArea(current.getStrArea());
+                                plan.setStrCategory(current.getStrCategory());
+                                plan.setStrIngredient1(current.getStrIngredient1());
+                                plan.setStrIngredient2(current.getStrIngredient2());
+                                plan.setStrIngredient3(current.getStrIngredient3());
+                                plan.setStrIngredient4(current.getStrIngredient4());
+                                plan.setStrIngredient5(current.getStrIngredient5());
+                                plan.setStrIngredient6(current.getStrIngredient6());
+                                plan.setStrIngredient7(current.getStrIngredient7());
+                                plan.setStrIngredient8(current.getStrIngredient8());
+                                plan.setStrIngredient9(current.getStrIngredient9());
+                                plan.setStrIngredient10(current.getStrIngredient10());
+                                plan.setStrIngredient11(current.getStrIngredient11());
+                                plan.setStrIngredient12(current.getStrIngredient12());
+                                plan.setStrIngredient13(current.getStrIngredient13());
+                                plan.setStrIngredient14(current.getStrIngredient14());
+                                plan.setStrYoutube(current.getStrYoutube());
+                                plan.setDayMeal("Wednesday");
+                                listener.addMealToPlan(plan);
+                            } else if (selectedDay == 5) {
+                                plan.setIdMeal(current.getIdMeal());
+                                plan.setStrMeal(current.getStrMeal());
+                                plan.setStrArea(current.getStrArea());
+                                plan.setStrCategory(current.getStrCategory());
+                                plan.setStrIngredient1(current.getStrIngredient1());
+                                plan.setStrIngredient2(current.getStrIngredient2());
+                                plan.setStrIngredient3(current.getStrIngredient3());
+                                plan.setStrIngredient4(current.getStrIngredient4());
+                                plan.setStrIngredient5(current.getStrIngredient5());
+                                plan.setStrIngredient6(current.getStrIngredient6());
+                                plan.setStrIngredient7(current.getStrIngredient7());
+                                plan.setStrIngredient8(current.getStrIngredient8());
+                                plan.setStrIngredient9(current.getStrIngredient9());
+                                plan.setStrIngredient10(current.getStrIngredient10());
+                                plan.setStrIngredient11(current.getStrIngredient11());
+                                plan.setStrIngredient12(current.getStrIngredient12());
+                                plan.setStrIngredient13(current.getStrIngredient13());
+                                plan.setStrIngredient14(current.getStrIngredient14());
+                                plan.setStrYoutube(current.getStrYoutube());
+                                plan.setDayMeal("Thursday");
+                                listener.addMealToPlan(plan);
+                            } else if (selectedDay == 6) {
+                                plan.setIdMeal(current.getIdMeal());
+                                plan.setStrMeal(current.getStrMeal());
+                                plan.setStrArea(current.getStrArea());
+                                plan.setStrCategory(current.getStrCategory());
+                                plan.setStrIngredient1(current.getStrIngredient1());
+                                plan.setStrIngredient2(current.getStrIngredient2());
+                                plan.setStrIngredient3(current.getStrIngredient3());
+                                plan.setStrIngredient4(current.getStrIngredient4());
+                                plan.setStrIngredient5(current.getStrIngredient5());
+                                plan.setStrIngredient6(current.getStrIngredient6());
+                                plan.setStrIngredient7(current.getStrIngredient7());
+                                plan.setStrIngredient8(current.getStrIngredient8());
+                                plan.setStrIngredient9(current.getStrIngredient9());
+                                plan.setStrIngredient10(current.getStrIngredient10());
+                                plan.setStrIngredient11(current.getStrIngredient11());
+                                plan.setStrIngredient12(current.getStrIngredient12());
+                                plan.setStrIngredient13(current.getStrIngredient13());
+                                plan.setStrIngredient14(current.getStrIngredient14());
+                                plan.setStrYoutube(current.getStrYoutube());
+                                plan.setDayMeal("Friday");
+                                listener.addMealToPlan(plan);
+                            } else if (selectedDay == 7) {
+                                plan.setIdMeal(current.getIdMeal());
+                                plan.setStrMeal(current.getStrMeal());
+                                plan.setStrArea(current.getStrArea());
+                                plan.setStrCategory(current.getStrCategory());
+                                plan.setStrIngredient1(current.getStrIngredient1());
+                                plan.setStrIngredient2(current.getStrIngredient2());
+                                plan.setStrIngredient3(current.getStrIngredient3());
+                                plan.setStrIngredient4(current.getStrIngredient4());
+                                plan.setStrIngredient5(current.getStrIngredient5());
+                                plan.setStrIngredient6(current.getStrIngredient6());
+                                plan.setStrIngredient7(current.getStrIngredient7());
+                                plan.setStrIngredient8(current.getStrIngredient8());
+                                plan.setStrIngredient9(current.getStrIngredient9());
+                                plan.setStrIngredient10(current.getStrIngredient10());
+                                plan.setStrIngredient11(current.getStrIngredient11());
+                                plan.setStrIngredient12(current.getStrIngredient12());
+                                plan.setStrIngredient13(current.getStrIngredient13());
+                                plan.setStrIngredient14(current.getStrIngredient14());
+                                plan.setStrYoutube(current.getStrYoutube());
+                                plan.setDayMeal("Saturday");
+                                listener.addMealToPlan(plan);
+                            }
+                        }
+                    });
 
-                builder.show();
-
+                    builder.show();
+                }
             }
         });
 

@@ -9,13 +9,14 @@ import android.widget.Button;
 
 import com.example.finalproject.BottomNavigationBar.Authentication.LoginActivity;
 import com.example.finalproject.BottomNavigationBar.Authentication.SignUpActivity;
+import com.example.finalproject.BottomNavigationBar.BottomNavigationActivity;
 
 public class StartActivity extends AppCompatActivity {
 
     Button signup;
     Button login;
     Button guest;
-
+    public  static boolean iisGuest = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,8 @@ public class StartActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
                 startActivity(intent);
+                iisGuest = false;
+
             }
         });
 
@@ -38,14 +41,17 @@ public class StartActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
+                iisGuest = false;
             }
         });
 
-       /* guest.setOnClickListener(new View.OnClickListener() {
+        guest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplicationContext(), BottomNavigationActivity.class);
+                startActivity(intent);
+                iisGuest = true;
             }
-        });*/
+        });
     }
 }

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.finalproject.BottomNavigationBar.MealScreen.view.MealScreenActivity;
 import com.example.finalproject.R;
+import com.example.finalproject.StartActivity;
 import com.example.finalproject.model.Meal;
 
 import java.util.List;
@@ -60,7 +62,13 @@ public class RandomMealsAdapter extends RecyclerView.Adapter<RandomMealsAdapter.
         holder.addFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.onMealClick(current);
+                if(StartActivity.iisGuest == true){
+                    Toast.makeText(context, "You Cant Add To Fav", Toast.LENGTH_SHORT).show();
+                }else{
+                    listener.onMealClick(current);
+
+                }
+
             }
         });
         holder.cardView.setOnClickListener(new View.OnClickListener() {
