@@ -58,4 +58,6 @@
     <string name="ingredients_btn">Ingredients</string>
     <string name="food_planner_title">Food Planner</string>
     <string name="default_web_client_id">100044799841-tr9r07391kgfommn3nb60h3729bd0m2m.apps.googleusercontent.com</string>
+    <string name="measures_title">Measures</string>
+    <string name="structures_title">Structures</string>
 </resources>

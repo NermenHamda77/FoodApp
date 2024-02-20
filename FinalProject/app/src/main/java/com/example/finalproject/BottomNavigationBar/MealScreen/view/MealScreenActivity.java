@@ -49,6 +49,33 @@ public class MealScreenActivity extends AppCompatActivity{
     TextView ingred19;
     TextView ingred20;
 
+
+
+    TextView messure1;
+    TextView messure2;
+    TextView messure3;
+    TextView messure4;
+    TextView messure5;
+    TextView messure6;
+    TextView messure7;
+    TextView messure8;
+    TextView messure9;
+    TextView messure10;
+    TextView messure11;
+    TextView messure12;
+    TextView messure13;
+    TextView messure14;
+    TextView messure15;
+    TextView messure16;
+    TextView messure17;
+    TextView messure18;
+    TextView messure19;
+    TextView messure20;
+
+
+    TextView structure;
+
+
     public static final String EXTRA_MEAL_DETAILS = "mealDetails";
 
     private static final String TAG = "MealScreenActivity";
@@ -82,6 +109,32 @@ public class MealScreenActivity extends AppCompatActivity{
         ingred18 = findViewById(R.id.tv_ingred18);
         ingred19 = findViewById(R.id.tv_ingred19);
         ingred20 = findViewById(R.id.tv_ingred20);
+
+
+        messure1 = findViewById(R.id.tv_mess1);
+        messure2 = findViewById(R.id.tv_mess2);
+        messure3 = findViewById(R.id.tv_mess3);
+        messure4 = findViewById(R.id.tv_mess4);
+        messure5 = findViewById(R.id.tv_mess5);
+        messure6 = findViewById(R.id.tv_mess6);
+        messure7 = findViewById(R.id.tv_mess7);
+        messure8 = findViewById(R.id.tv_mess8);
+        messure9 = findViewById(R.id.tv_mess9);
+        messure10 = findViewById(R.id.tv_mess10);
+        messure11 = findViewById(R.id.tv_mess11);
+        messure12 = findViewById(R.id.tv_mess12);
+        messure13 = findViewById(R.id.tv_mess13);
+        messure14 = findViewById(R.id.tv_mess14);
+        messure15 = findViewById(R.id.tv_mess15);
+        messure16 = findViewById(R.id.tv_mess16);
+        messure17 = findViewById(R.id.tv_mess17);
+        messure18 = findViewById(R.id.tv_mess18);
+        messure19 = findViewById(R.id.tv_mess19);
+        messure20 = findViewById(R.id.tv_mess20);
+
+        structure = findViewById(R.id.tv_structt_body);
+
+
 
 
         Intent intent = getIntent();
@@ -121,6 +174,30 @@ public class MealScreenActivity extends AppCompatActivity{
         ingred18.setText(meal.getStrIngredient18());
         ingred19.setText(meal.getStrIngredient19());
         ingred20.setText(meal.getStrIngredient20());
+
+
+        messure1.setText(meal.getStrMeasure1());
+        messure2.setText(meal.getStrMeasure2());
+        messure3.setText(meal.getStrMeasure3());
+        messure4.setText(meal.getStrMeasure4());
+        messure5.setText(meal.getStrMeasure5());
+        messure6.setText(meal.getStrMeasure6());
+        messure7.setText(meal.getStrMeasure7());
+        messure8.setText(meal.getStrMeasure8());
+        messure9.setText(meal.getStrMeasure9());
+        messure10.setText(meal.getStrMeasure10());
+        messure11.setText(meal.getStrMeasure11());
+        messure12.setText(meal.getStrMeasure12());
+        messure13.setText(meal.getStrMeasure13());
+        messure14.setText(meal.getStrMeasure14());
+        messure15.setText(meal.getStrMeasure15());
+        messure16.setText(meal.getStrMeasure16());
+        messure17.setText(meal.getStrMeasure17());
+        messure18.setText(meal.getStrMeasure18());
+        messure19.setText(meal.getStrMeasure19());
+        messure20.setText(meal.getStrMeasure20());
+
+        structure.setText(meal.getStrInstructions());
 
 
         if(meal.getStrYoutube() != null){
