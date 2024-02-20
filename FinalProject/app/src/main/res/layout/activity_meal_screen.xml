@@ -601,7 +601,7 @@
                 android:textColor="@color/simon8"
                 android:fontFamily="@font/lobster"
                 android:layout_marginStart="16dp"
-                android:text="@string/structures_title"
+                android:text="@string/steps_of_meal_title"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -657,7 +657,7 @@
 
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/lobster"
-                        android:text="@string/steps_of_meal_title"
+                        android:text="Watch Video"
                         android:textColor="@color/simon8"
                         android:textSize="24sp"
                         android:textStyle="bold" />
