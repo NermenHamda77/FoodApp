@@ -86,6 +86,47 @@ public class SearchPresenterImp implements SearchPresenter {
                 });
     }
 
+    /**
+     *
+     */
+    @Override
+    public void getIngredients() {
+        Observable<IngredientResponse> observable = repo.getAllIngredients();
+        observable.observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<IngredientResponse>() {
+                    @Override
+                    public void onSubscribe(@NonNull Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(@NonNull IngredientResponse ingredientResponse) {
+                        view.showIngredients(ingredientResponse.getIngredients());
+
+                    }
+
+                    @Override
+                    public void onError(@NonNull Throwable e) {
+                        view.showMsg("Error" + e.getMessage());
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+    }
+
+    /*
+    repo.getIngredients()
+                .subscribeOn(Schedulers.newThread())
+                .map(item -> item.getAllIngredients())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(
+                        item -> view.setIngredients(item),
+                        error -> massege.showMsg(error.getMessage())
+                );
+     */
 
 
 }

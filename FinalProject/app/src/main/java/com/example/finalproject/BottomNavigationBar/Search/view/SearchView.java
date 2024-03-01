@@ -10,6 +10,7 @@ import java.util.List;
 public interface SearchView {
      void showCategories(List<Category> categories) ;
      void showCountries(List<Country> meals);
+    void showIngredients(List<Ingredient> meals);
 
      void showMsg(String error);
     }

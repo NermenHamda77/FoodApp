@@ -1,6 +1,13 @@
 package com.example.finalproject.model;
 
 public class Ingredient {
+    /*
+        @SerializedName("meals")
+    private List<IngredientDTO> ingredients;
+    public  List<IngredientDTO> getAllIngredients(){
+        return ingredients;
+    }
+     */
     String strIngredient1;
     String strIngredient2;
     String strIngredient3;

@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:orientation="horizontal"
-        android:weightSum="2"
+        android:weightSum="3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_first_part_search">
@@ -59,7 +59,7 @@
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
             android:layout_marginEnd="5dp"
-            android:textSize="16sp"/>
+            android:textSize="14sp"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,11 +68,22 @@
             android:text="@string/countries_btn"
             android:textStyle="bold"
             android:layout_weight="1"
-            android:layout_marginEnd="16dp"
-            android:textSize="16sp"
+            android:layout_marginEnd="5dp"
+            android:textSize="14sp"
             android:textColor="@color/black"
             />
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/simon3"
+            android:id="@+id/btn_ingredients_list_search"
+            android:text="Ingredients"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="16dp"
+            android:textSize="14sp"/>
 
     </LinearLayout>
 

@@ -62,6 +62,10 @@ public class MealsRepositoryImp implements MealsRepository {
     public Observable<CountryResponse> getAllCountries() {
         return remoteSource.networkCountries();
     }
+    @Override
+    public Observable<IngredientResponse> getAllIngredients() {
+        return remoteSource.networkAllIngredients();
+    }
 
     @Override
     public Observable<MealResponse> getAllMealsByCountryName(String countryName) {
@@ -75,16 +79,17 @@ public class MealsRepositoryImp implements MealsRepository {
 
     @Override
     public Observable<MealResponse> getSearchMeals() {
-        return remoteSource.networkGetSearchMeals();
+        return remoteSource.networkGetMealSearch();
     }
 
-    /**
-     * @return
-     */
+
     @Override
-    public Observable<IngredientResponse> getAllIngredients(String meal) {
+    public Observable<IngredientResponse> getIngredientsByMeal(String meal) {
         return remoteSource.networkIngredients(meal);
     }
+
+
+
 
 
     @Override

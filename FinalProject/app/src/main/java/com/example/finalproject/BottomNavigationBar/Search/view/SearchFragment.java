@@ -211,7 +211,13 @@ public class SearchFragment extends Fragment implements SearchView{
 
     }
 
-
+    /**
+     * @param meals
+     */
+    @Override
+    public void showIngredients(List<Ingredient> meals) {
+        //////////////
+    }
 
 
     @Override

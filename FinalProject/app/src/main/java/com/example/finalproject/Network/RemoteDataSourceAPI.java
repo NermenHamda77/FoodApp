@@ -56,6 +56,12 @@ public class RemoteDataSourceAPI implements RemoteDataSource {
 
     }
 
+
+    @Override
+    public Observable<IngredientResponse> networkAllIngredients() {
+        Observable<IngredientResponse> responseObservable = mealService.getAllIngredients().subscribeOn(Schedulers.io());
+        return responseObservable;    }
+
     @Override
     public Observable networkIngredients(String ingredients) {
 
@@ -84,6 +90,13 @@ public class RemoteDataSourceAPI implements RemoteDataSource {
     @Override
     public Observable<MealResponse> networkGetMealDetails() {
         Observable<MealResponse> responseObservable = mealService.getMeals().subscribeOn(Schedulers.io());
+        return responseObservable;
+    }
+
+
+    @Override
+    public Observable<MealResponse> networkGetMealSearch() {
+        Observable<MealResponse> responseObservable = mealService.getSearchedMeals().subscribeOn(Schedulers.io());
         return responseObservable;
     }
 }

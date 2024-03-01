@@ -1,5 +1,7 @@
 package com.example.finalproject.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class IngredientResponse {
@@ -7,4 +9,7 @@ public class IngredientResponse {
     public List<Ingredient> getIngredients() {
         return ingredients;
     }
+
+
+
 }

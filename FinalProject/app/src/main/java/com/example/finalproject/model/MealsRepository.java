@@ -7,32 +7,39 @@ import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.core.Observable;
 
 public interface MealsRepository {
-      Observable<MealResponse> getRandomMeal();
-      Observable<MealResponse> getAllMeal();
+    Observable<MealResponse> getRandomMeal();
+
+    Observable<MealResponse> getAllMeal();
 
 
-     Observable<CategoryResponse> getAllCategoriess();
-     Completable insertMeal(Meal meals);
-     Flowable<List<Meal>> getStoredMeals();
+    Observable<CategoryResponse> getAllCategoriess();
 
-     Completable deleteMeal(Meal meals);
+    Completable insertMeal(Meal meals);
 
-      Observable<CountryResponse> getAllCountries();
+    Flowable<List<Meal>> getStoredMeals();
 
-     Observable getAllMealsByCountryName(String countryName);
-     Observable getAllMealsByCategoryName(String categoryName);
+    Completable deleteMeal(Meal meals);
 
-     Observable<MealResponse> getSearchMeals();
+    Observable<CountryResponse> getAllCountries();
 
-     Observable<IngredientResponse> getAllIngredients(String meal);
+    Observable getAllMealsByCountryName(String countryName);
+
+    Observable getAllMealsByCategoryName(String categoryName);
+
+    // ------- search -----
+    Observable<MealResponse> getSearchMeals();
+
+    Observable<IngredientResponse> getIngredientsByMeal(String meal);
+
+    Observable<IngredientResponse> getAllIngredients();
 
     //plan
 
-     Flowable<List<MealPlan>> getStoredPlans();
-     Completable insertPlan(MealPlan plan);
-     Completable deletePlan(MealPlan plan);
+    Flowable<List<MealPlan>> getStoredPlans();
 
+    Completable insertPlan(MealPlan plan);
 
+    Completable deletePlan(MealPlan plan);
 
 
 }

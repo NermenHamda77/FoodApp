@@ -46,6 +46,15 @@ public interface MealService {
     @GET("search.php?")
     Observable<MealResponse>  getSearchMeals();
 
+    @GET("list.php?i=list")
+    Observable<IngredientResponse> getAllIngredients();
+
+
+    //Get Meals for search
+    @GET("search.php?s")
+    Observable<MealResponse> getSearchedMeals();
+
+
 }
 
 

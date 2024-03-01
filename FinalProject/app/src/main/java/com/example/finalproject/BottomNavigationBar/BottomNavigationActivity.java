@@ -12,7 +12,7 @@ import com.example.finalproject.BottomNavigationBar.Category.view.CategoryFragme
 import com.example.finalproject.BottomNavigationBar.FavoriteMeals.view.FavoriteFragment;
 import com.example.finalproject.BottomNavigationBar.Home.HomeFragment;
 import com.example.finalproject.BottomNavigationBar.PlanMeals.view.MealPlanFragment;
-import com.example.finalproject.BottomNavigationBar.Search.view.SearchFragment;
+import com.example.finalproject.BottomNavigationBar.Search.view.SearchhFragment;
 import com.example.finalproject.R;
 import com.example.finalproject.databinding.ActivityBottomNavigationBinding;
 
@@ -41,7 +41,7 @@ public class BottomNavigationActivity extends AppCompatActivity {
                 replaceFragments(new MealPlanFragment());
             }
             else if (item.getItemId() == R.id.search_id) {
-                replaceFragments(new SearchFragment());
+                replaceFragments(new SearchhFragment());
             }
             else if (item.getItemId() == R.id.fav_id) {
                 replaceFragments(new FavoriteFragment());

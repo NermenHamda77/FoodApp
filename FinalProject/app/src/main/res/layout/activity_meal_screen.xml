@@ -123,25 +123,63 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_home_country_name">
 
-                <TextView
-                    android:id="@+id/tv_ingred1"
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="14dp"
-                    android:text="Ingredient1"
-                    android:textColor="@color/simon2"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
+                    <TextView
+                        android:id="@+id/tv_ingred1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="14dp"
+                        android:text="Ingredient1"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred2"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
                 <TextView
                     android:id="@+id/tv_ingred2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred3"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
 
                 <TextView
                     android:id="@+id/tv_ingred3"
@@ -149,20 +187,48 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
+                </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred4"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
                 <TextView
                     android:id="@+id/tv_ingred4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred5"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
 
                 <TextView
                     android:id="@+id/tv_ingred5"
@@ -170,9 +236,22 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred6"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
 
                 <TextView
                     android:id="@+id/tv_ingred6"
@@ -180,9 +259,23 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred7"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
 
                 <TextView
                     android:id="@+id/tv_ingred7"
@@ -190,9 +283,23 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred8"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
 
                 <TextView
                     android:id="@+id/tv_ingred8"
@@ -200,10 +307,22 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
-
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred9"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
 
                 <TextView
                     android:id="@+id/tv_ingred9"
@@ -211,19 +330,45 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
-
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred10"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
                 <TextView
                     android:id="@+id/tv_ingred10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred11"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
 
                 <TextView
                     android:id="@+id/tv_ingred11"
@@ -231,9 +376,23 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred12"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
 
                 <TextView
                     android:id="@+id/tv_ingred12"
@@ -241,19 +400,45 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred13"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
                 <TextView
                     android:id="@+id/tv_ingred13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred14"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
 
 
                 <TextView
@@ -262,50 +447,113 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred15"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
                 <TextView
                     android:id="@+id/tv_ingred15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
-
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred16"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
                 <TextView
                     android:id="@+id/tv_ingred16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred17"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
                 <TextView
                     android:id="@+id/tv_ingred17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred18"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
                 <TextView
                     android:id="@+id/tv_ingred18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
-
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred19"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
 
                 <TextView
                     android:id="@+id/tv_ingred19"
@@ -313,19 +561,32 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
-
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/card_ingred20"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:backgroundTint="@color/simon3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="10dp">
                 <TextView
                     android:id="@+id/tv_ingred20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="14dp"
                     android:text="Ingredient1"
-                    android:textColor="@color/simon2"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
             </GridLayout>
 
 
